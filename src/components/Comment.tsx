@@ -5,9 +5,20 @@ interface IProps {
 }
 
 const Comment: React.FC<IProps> = props => {
-  return (
-    <div>Comment</div>
-  )
+
+    const { comment: { author, created, id, likes, parent, text }} = props;
+
+    return (
+        <div>
+            <p>{author}</p>
+            <p>{created}</p>
+            <p>{id}</p>
+            <p>{likes}</p>
+            <p>{parent}</p>
+            <p>{text}</p>
+            <hr />
+        </div>
+    )
 }
 
 export default Comment

@@ -1,0 +1,28 @@
+.loader {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+
+.loader::after {
+    content: " ";
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+    border-radius: 50%;
+    border-width: 4px;
+    border-style: solid;
+    border-color: black transparent black transparent;
+    animation: loader-rotating 1.2s linear infinite;
+}
+
+@keyframes loader-rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
