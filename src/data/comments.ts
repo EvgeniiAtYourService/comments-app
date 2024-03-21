@@ -1,17 +1,9 @@
 import {subtractHours} from "src/lib/date";
-
-interface IPagination<T> {
-    pagination: {
-        page: number;
-        size: number;
-        total_pages: number;
-    };
-    data: T;
-}
+import { IPagination } from "src/models/comments";
 
 const today = new Date();
 
-const commentsPage1: IPagination<any[]> = {
+const commentsPage1: IPagination = {
     pagination: {
         page: 1,
         size: 6,
@@ -142,7 +134,7 @@ const commentsPage1: IPagination<any[]> = {
     ],
 };
 
-const commentsPage2: IPagination<any[]> = {
+const commentsPage2: IPagination = {
     pagination: {
         page: 2,
         size: 6,
@@ -216,7 +208,7 @@ const commentsPage2: IPagination<any[]> = {
     ],
 };
 
-const commentsPage3: IPagination<any[]> = {
+const commentsPage3: IPagination = {
     pagination: {
         page: 3,
         size: 6,
